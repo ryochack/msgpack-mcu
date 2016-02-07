@@ -52,7 +52,7 @@
 /*
  * Little Endian
  */
-#ifdef UMSGPACK_LITTLE_ENDIAN
+#ifdef UMSGPACK_HW_LITTLE_ENDIAN
 static inline unsigned short _bswap_16(unsigned short x) {
     return (x << 8) | (x >> 8);
 }
@@ -69,7 +69,7 @@ static inline uint64_t _bswap_64(uint64_t x) {
 /*
  * Big Endian
  */
-#ifdef UMSGPACK_BIG_ENDIAN
+#ifdef UMSGPACK_HW_BIG_ENDIAN
 static inline unsigned short _bswap_16(unsigned short x) {
     return x;
 }
